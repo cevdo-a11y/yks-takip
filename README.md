@@ -16,7 +16,7 @@ Bu paket, GitHub Pages üzerinden yayınlanabilen tek sayfalı bir PWA'dır.
 
 ## GitHub Pages
 1. ZIP'i çıkar.
-2. GitHub reposuna bu klasördeki dosyaları yükle.
+2. ZIP açıldığında görünen `index.html`, `manifest.json`, `sw.js` ve ikon dosyalarını **doğrudan repository ana dizinine** yükle. `YKS_2027_Akilli_Koc` adlı ek bir klasör oluşturup onun içine koyma.
 3. Settings → Pages → Deploy from branch → `main` / root seç.
 4. HTTPS adresinden tabletten aç.
 5. Tarayıcı destekliyorsa “Uygulamayı yükle” seçeneği ile ana ekrana ekle.
