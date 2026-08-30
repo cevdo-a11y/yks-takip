@@ -1,23 +1,24 @@
-# YKS 2027 Akıllı Koç v3.1
+# YKS 2027 Akıllı Koç — v3.2.0
 
 GitHub Pages için kök dizine yüklenebilir PWA.
 
-## Özellikler
-- TYT/AYT konu takip sistemi
-- Günlük plan ve akıllı öneriler
-- 1/3/7/14/30/60 gün tekrar döngüsü
-- TYT dersleri: Türkçe 40, Sosyal 20, Matematik 40, Fen 20
-- AYT dersleri: Matematik 40, Fizik 14, Kimya 13, Biyoloji 13
-- Ders bazlı doğru/yanlış/boş/net hesabı
-- Deneme düzenleme/silme ve hata konu analizi
-- Fotoğraflı yanlış soru kumbarası (IndexedDB)
-- Kronometre, odak modu, tam ekran ve destekleyen tarayıcılarda Screen Wake Lock
-- Günlük çalışma oturumu geçmişi
-- JSON yedekleme/geri yükleme
-- Açık/koyu tema
-- Mobil/tablet uyumlu PWA
+## Kronometre
+- Serbest kronometre ve odak zamanlayıcı
+- Odak modu ve tam ekran
+- Destekleyen HTTPS tarayıcılarında Screen Wake Lock
+- Tur kayıtları
+- **Kaydet**: onay penceresi ile süre/oturum/notu günlük geçmişine kaydeder
+- **Sıfırla**: onay penceresi ile kaydedilmemiş süre ve turları temizler
 
-## GitHub Pages
-ZIP'i açıp içindeki dosyaları repository'nin ana dizinine koyun. Settings > Pages > Deploy from branch > main > / (root).
+## Denemeler
+TYT: Türkçe 40, Sosyal 20, Matematik 40, Fen 20.
+AYT: Matematik 40, Fizik 14, Kimya 13, Biyoloji 13. Ders bazında doğru/yanlış/boş/net girişi ve otomatik hesaplama bulunur.
 
-Uygulama verileri cihazdaki tarayıcı depolamasında tutulur; GitHub repository'sine yazılmaz.
+## Yanlışlar
+Tablet fotoğraf seçicisi üzerinden birden çok soru fotoğrafı eklenebilir. Fotoğraflar cihazdaki IndexedDB'de saklanır; GitHub'a gönderilmez.
+
+## Veri
+Çalışma kayıtları, denemeler, planlar, konu durumları ve hedefler tarayıcı yerel depolamasında tutulur. Ayarlar'dan JSON yedeği alınabilir.
+
+## Kurulum
+ZIP içindeki dosyaları repository köküne koyun ve GitHub Pages'i `main` dalı / root klasöründen yayınlayın.
