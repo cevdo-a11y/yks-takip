@@ -1,24 +1,22 @@
-# YKS 2027 Akıllı Koç — v3.2.0
+# YKS 2027 Akıllı Koç — v4.0
 
-GitHub Pages için kök dizine yüklenebilir PWA.
+GitHub Pages için hazırlanmış, tablet uyumlu YKS 2027 çalışma takip PWA'sı.
 
-## Kronometre
-- Serbest kronometre ve odak zamanlayıcı
-- Odak modu ve tam ekran
-- Destekleyen HTTPS tarayıcılarında Screen Wake Lock
-- Tur kayıtları
-- **Kaydet**: onay penceresi ile süre/oturum/notu günlük geçmişine kaydeder
-- **Sıfırla**: onay penceresi ile kaydedilmemiş süre ve turları temizler
+## v4.0 öne çıkanlar
+- Tablet yatay/dikey kullanım için ergonomik açılır menü; ekranın menü dışındaki herhangi bir yerine dokununca kapanır.
+- Akıllı Planlayıcı görev durumu: Başlat → Çalışılıyor → Tamamlandı.
+- Manuel görev eklerken süre alanı kaldırıldı.
+- Görev silme desteği.
+- Günlük Koç programı: istenen çalışma süresi + Hafif/Orta/Zor yoğunluk seçimi.
+- Koç; konu durumu, ustalık, tekrar zamanı ve deneme hata kayıtlarını dikkate alır.
+- Hedefler yalnızca üniversite/bölüm ve TYT/AYT net hedeflerinden oluşur.
+- Ana sayfada tüm zamanların kaydedilmiş toplam çalışma süresi.
+- Haftalık ve aylık raporlar + gelecek hafta/ay tavsiyeleri.
+- Önceki sürüm verileri için geriye dönük veri okuma.
+- Service Worker cache sürümü v4.0 ile yenilendi.
 
-## Denemeler
-TYT: Türkçe 40, Sosyal 20, Matematik 40, Fen 20.
-AYT: Matematik 40, Fizik 14, Kimya 13, Biyoloji 13. Ders bazında doğru/yanlış/boş/net girişi ve otomatik hesaplama bulunur.
-
-## Yanlışlar
-Tablet fotoğraf seçicisi üzerinden birden çok soru fotoğrafı eklenebilir. Fotoğraflar cihazdaki IndexedDB'de saklanır; GitHub'a gönderilmez.
+## GitHub Pages
+Dosyaları repository köküne yükleyin ve Settings → Pages → Deploy from branch → main → / (root) seçin.
 
 ## Veri
-Çalışma kayıtları, denemeler, planlar, konu durumları ve hedefler tarayıcı yerel depolamasında tutulur. Ayarlar'dan JSON yedeği alınabilir.
-
-## Kurulum
-ZIP içindeki dosyaları repository köküne koyun ve GitHub Pages'i `main` dalı / root klasöründen yayınlayın.
+Kişisel veriler tarayıcıda yerel olarak saklanır. GitHub Pages verilerinizi repository'ye yazmaz.
