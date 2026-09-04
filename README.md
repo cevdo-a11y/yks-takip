@@ -1,22 +1,22 @@
-# YKS 2027 Akıllı Koç — v4.0
+# YKS 2027 • Akıllı Koç v5.0
 
-GitHub Pages için hazırlanmış, tablet uyumlu YKS 2027 çalışma takip PWA'sı.
+GitHub Pages ile yayınlanabilen, tablet uyumlu kişisel YKS çalışma PWA'sı.
 
-## v4.0 öne çıkanlar
-- Tablet yatay/dikey kullanım için ergonomik açılır menü; ekranın menü dışındaki herhangi bir yerine dokununca kapanır.
-- Akıllı Planlayıcı görev durumu: Başlat → Çalışılıyor → Tamamlandı.
-- Manuel görev eklerken süre alanı kaldırıldı.
-- Görev silme desteği.
-- Günlük Koç programı: istenen çalışma süresi + Hafif/Orta/Zor yoğunluk seçimi.
-- Koç; konu durumu, ustalık, tekrar zamanı ve deneme hata kayıtlarını dikkate alır.
-- Hedefler yalnızca üniversite/bölüm ve TYT/AYT net hedeflerinden oluşur.
-- Ana sayfada tüm zamanların kaydedilmiş toplam çalışma süresi.
-- Haftalık ve aylık raporlar + gelecek hafta/ay tavsiyeleri.
-- Önceki sürüm verileri için geriye dönük veri okuma.
-- Service Worker cache sürümü v4.0 ile yenilendi.
+## v5.0 öne çıkanlar
+- Aktif Koç sekmesi ve yerel koç sohbeti
+- Günlük süre + hafif/orta/zor çalışma modu ile program oluşturma
+- Sayısal için günlük paragraf + problem + geometri rutini
+- Sayısal öğrencisi için 2-3 günde bir TYT Sosyal konu özeti rutini
+- Tüm derslerin konu ustalığı, tekrarları ve deneme hatalarını önceliklendirme
+- TYT hazırlık düzeyi güçlendikçe AYT bloklarını plana dahil etme
+- Haftalık/aylık rapor ve sonraki dönem tavsiyeleri
+- Planlayıcıda Başlat / Çalışılıyor / Tamamlandı / Sil
+- Deneme ders bazlı doğru/yanlış/boş/net
+- Kronometre, Kaydet, Sıfırla onayları, Odak Modu ve Screen Wake Lock desteği
+- Yerel veri kaydı, JSON yedekleme/geri yükleme
 
 ## GitHub Pages
-Dosyaları repository köküne yükleyin ve Settings → Pages → Deploy from branch → main → / (root) seçin.
+ZIP'i açıp içindeki dosyaları repository'nin kök dizinine yükleyin. GitHub Pages'i `main` + `/ (root)` üzerinden yayınlayın.
 
-## Veri
-Kişisel veriler tarayıcıda yerel olarak saklanır. GitHub Pages verilerinizi repository'ye yazmaz.
+## Önemli not
+Koç sohbeti bu sürümde harici bir yapay zekâ servisine bağlanmaz; uygulama içindeki kişisel verileri kullanan kural tabanlı bir koçtur. Bu nedenle öneriler internet gerektirmeden çalışır ve veriler cihazda kalır.
