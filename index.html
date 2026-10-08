@@ -69,7 +69,7 @@ html{touch-action:manipulation;-webkit-text-size-adjust:100%}button,.btn,input,s
 <script>
 const KEY='yks27-coach-v5-1';
 const LEGACY_KEYS=['yks27-coach-v5-0','yks27-coach-v4-0','yks27-coach-v3-2','yks27-coach-v3','yks27-coach-v2'];
-const APP_VERSION='5.1.0';
+const APP_VERSION='5.1.1';
 const SUBJECTS={
   'TYT Türkçe':['Sözcükte Anlam','Cümlede Anlam','Paragraf','Ses Bilgisi','Yazım Kuralları','Noktalama İşaretleri','Sözcük Türleri','Fiil ve Fiilimsiler','Cümlenin Ögeleri','Cümle Türleri','Anlatım Bozuklukları','Dil Bilgisi Karma'],
   'TYT Matematik':['Temel Kavramlar','Sayılar','Bölünebilme','EBOB-EKOK','Rasyonel Sayılar','Basit Eşitsizlikler','Mutlak Değer','Üslü Sayılar','Köklü Sayılar','Oran-Orantı','Denklem ve Eşitsizlikler','Problemler','Kümeler','Mantık','Fonksiyonlara Giriş','Permütasyon-Kombinasyon','Olasılık','Veri-İstatistik'],
@@ -94,6 +94,9 @@ const SUBJECTS={
   'AYT Kimya':['Modern Atom Teorisi','Gazlar','Sıvı Çözeltiler ve Çözünürlük','Kimyasal Tepkimelerde Enerji','Kimyasal Tepkimelerde Hız','Kimyasal Denge','Asit-Baz Dengesi','Çözünürlük Dengesi','Elektrokimya','Karbon Kimyasına Giriş','Organik Bileşikler'],
   'AYT Biyoloji':['Sinir Sistemi','Endokrin Sistem','Duyu Organları','Destek-Hareket Sistemi','Sindirim Sistemi','Dolaşım Sistemi','Bağışıklık','Solunum Sistemi','Üriner Sistem','Üreme ve Embriyonik Gelişim','Genetik','Canlılarda Enerji Dönüşümleri','Bitki Biyolojisi','Ekoloji']
 };
+const SAYISAL_TYT=['TYT Matematik','TYT Fizik','TYT Kimya','TYT Biyoloji','TYT Geometri'];
+const SAYISAL_AYT=['AYT Matematik','AYT Fizik','AYT Kimya','AYT Biyoloji','AYT Geometri'];
+const SAYISAL_PAIRS=[{tyt:'TYT Matematik',ayt:'AYT Matematik'},{tyt:'TYT Fizik',ayt:'AYT Fizik'},{tyt:'TYT Kimya',ayt:'AYT Kimya'},{tyt:'TYT Biyoloji',ayt:'AYT Biyoloji'},{tyt:'TYT Geometri',ayt:'AYT Geometri'}];
 const MENUS=[['anasayfa','⌂','Ana Sayfa'],['konular','▣','Konular'],['plan','✓','Akıllı Planlayıcı'],['koc','🧠','Koç'],['denemeler','✎','Denemeler'],['tekrar','↻','Bilimsel Tekrar'],['kronometre','⏱','Kronometre'],['hedefler','★','Hedefler'],['raporlar','◫','Raporlar'],['yanlislar','⚠','Yanlışlar'],['ayarlar','⚙','Ayarlar']];
 const EXAM_SUBJECTS={
   TYT:[['tyt_turkce','Türkçe',40,'TYT Türkçe'],['tyt_sosyal','Sosyal',20,'TYT Sosyal'],['tyt_matematik','Matematik',40,'TYT Matematik'],['tyt_fen','Fen',20,'TYT Fen']],
@@ -102,6 +105,8 @@ const EXAM_SUBJECTS={
 
 const PLAN_INTERVALS=[1,3,7,14,30,60];
 let deferredInstall=null;
+let currentCoachSuggestions=[];
+let reportMonth=today().slice(0,7);
 let db=load();
 function defaultDB(){return normalize({theme:'light',examDate:'2027-06-19',examOfficial:false,profile:{name:'',target:'',university:'',netTargets:{tyt:80,ayt:55}},topics:{},plans:[],exams:[],mistakes:[],notes:[],dailyLogs:[],savedSessions:[],stopwatch:{elapsed:0,running:false,startedAt:null},settings:{weekStart:1}})}
 function load(){let raw=null;try{raw=localStorage.getItem(KEY);if(!raw)for(const k of LEGACY_KEYS){raw=localStorage.getItem(k);if(raw)break}}catch(e){};if(raw)try{return normalize(JSON.parse(raw))}catch(e){}return defaultDB()}

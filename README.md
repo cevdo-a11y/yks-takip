@@ -9,7 +9,7 @@ Tablet ve GitHub Pages için hazırlanmış PWA.
 - Her gün paragraf + problem + geometri rutini; 2–3 günde bir TYT Sosyal özet okuması ayrı rutin olarak planlanır.
 - PRO Raporlar: aylık seçim, çalışma hacmi, görev disiplini, konu ilerleyişi, deneme trendi, sayısal ders tablosu ve gelecek hafta/ay tavsiyeleri.
 - Aylık rapor için PDF'e kaydetmeye uygun A4 yazdırma görünümü.
-- Service Worker cache sürümü 5.1.0.
+- Service Worker cache sürümü 5.1.1.
 
 ## GitHub Pages
 Dosyaları repository kök dizinine koy:
@@ -25,3 +25,6 @@ Settings → Pages → Deploy from a branch → main → /(root)
 
 ## Aylık PDF
 Raporlar > Aylık PDF raporu düğmesi tarayıcının yazdırma ekranını açar. Buradan "PDF olarak kaydet" seçilebilir. Bu yöntem harici PDF kütüphanesi gerektirmeden çevrimdışı PWA ile çalışır.
+
+
+Düzeltme: Akıllı Planlayıcı, Koç ve Raporlar sekmelerindeki eksik global değişkenler giderildi. 11 ana sekme Node tabanlı DOM stub testiyle açılış render testinden geçirildi.
