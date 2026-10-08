@@ -1,22 +1,27 @@
-# YKS 2027 • Akıllı Koç v5.0
+# YKS 2027 • Akıllı Koç v5.1 PRO
 
-GitHub Pages ile yayınlanabilen, tablet uyumlu kişisel YKS çalışma PWA'sı.
+Tablet ve GitHub Pages için hazırlanmış PWA.
 
-## v5.0 öne çıkanlar
-- Aktif Koç sekmesi ve yerel koç sohbeti
-- Günlük süre + hafif/orta/zor çalışma modu ile program oluşturma
-- Sayısal için günlük paragraf + problem + geometri rutini
-- Sayısal öğrencisi için 2-3 günde bir TYT Sosyal konu özeti rutini
-- Tüm derslerin konu ustalığı, tekrarları ve deneme hatalarını önceliklendirme
-- TYT hazırlık düzeyi güçlendikçe AYT bloklarını plana dahil etme
-- Haftalık/aylık rapor ve sonraki dönem tavsiyeleri
-- Planlayıcıda Başlat / Çalışılıyor / Tamamlandı / Sil
-- Deneme ders bazlı doğru/yanlış/boş/net
-- Kronometre, Kaydet, Sıfırla onayları, Odak Modu ve Screen Wake Lock desteği
-- Yerel veri kaydı, JSON yedekleme/geri yükleme
+## v5.1 PRO değişiklikleri
+- Akıllı Planlayıcı / Koçun Anlık Önerileri: güvenli indeks tabanlı "Plana Ekle" akışı.
+- Sayısal Aktif Koç: günlük saat hedefi + hafif/orta/zor mod + aktif sohbet + TYT→AYT kademeli yol haritası.
+- Koçun konu önerileri yalnızca TYT Matematik, TYT Fizik, TYT Kimya, TYT Biyoloji, TYT Geometri ve hazır oldukça bunların AYT karşılıklarından üretilir.
+- Her gün paragraf + problem + geometri rutini; 2–3 günde bir TYT Sosyal özet okuması ayrı rutin olarak planlanır.
+- PRO Raporlar: aylık seçim, çalışma hacmi, görev disiplini, konu ilerleyişi, deneme trendi, sayısal ders tablosu ve gelecek hafta/ay tavsiyeleri.
+- Aylık rapor için PDF'e kaydetmeye uygun A4 yazdırma görünümü.
+- Service Worker cache sürümü 5.1.0.
 
 ## GitHub Pages
-ZIP'i açıp içindeki dosyaları repository'nin kök dizinine yükleyin. GitHub Pages'i `main` + `/ (root)` üzerinden yayınlayın.
+Dosyaları repository kök dizinine koy:
 
-## Önemli not
-Koç sohbeti bu sürümde harici bir yapay zekâ servisine bağlanmaz; uygulama içindeki kişisel verileri kullanan kural tabanlı bir koçtur. Bu nedenle öneriler internet gerektirmeden çalışır ve veriler cihazda kalır.
+- index.html
+- manifest.json
+- sw.js
+- icon-192.png
+- icon-512.png
+- README.md
+
+Settings → Pages → Deploy from a branch → main → /(root)
+
+## Aylık PDF
+Raporlar > Aylık PDF raporu düğmesi tarayıcının yazdırma ekranını açar. Buradan "PDF olarak kaydet" seçilebilir. Bu yöntem harici PDF kütüphanesi gerektirmeden çevrimdışı PWA ile çalışır.
